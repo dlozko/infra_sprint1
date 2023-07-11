@@ -1,14 +1,15 @@
 import os
 from pathlib import Path
+
 from dotenv import load_dotenv
 
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('SECRET', default="SECRET")
+SECRET_KEY = os.getenv('SECRET_KEY', default="SECRET")
 
-DEBUG = False
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = ['158.160.73.232', '127.0.0.1', 'localhost', 'dlozkkitty.ddns.net']
 
